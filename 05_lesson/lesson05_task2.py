@@ -8,7 +8,7 @@ service = ChromeService(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 
 driver.get("http://uitestingplayground.com/dynamicid")
-button = driver.find_element(By.ID, "90924675-5bd3-1914-4f48-ef211dd4b8d8")
+button = driver.find_element(By.CSS_SELECTOR, 'button[class*="btn-primary"]')
 button.click()
 
 sleep(50)
